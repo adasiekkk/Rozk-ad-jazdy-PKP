@@ -73,9 +73,6 @@ for trip_id in stops_time['trip_id'].unique():
                                         "odleglosc":odleglosc,
                                         "date":date
                                        })
-               
-    
-# Tworzymy DataFrame z wynikami
 df_wyniki = pd.DataFrame(wyniki)
 df_wyniki["departure_time"] = pd.to_timedelta(df_wyniki["departure_time"])
 df_wyniki = df_wyniki.sort_values(by="departure_time")
